@@ -1,41 +1,40 @@
-package com.example.mygoalskotlin.Login.ViewModel
+package com.example.mygoalskotlin.Register.ViewModel
 
 import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.Firebase.UserRepository
-import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Login.View.LoginActivity
-import com.example.mygoalskotlin.Register.View.RegisterActivity
+import com.example.mygoalskotlin.Register.Model.RegisterModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-
-class LoginViewModel(private val userRepository: UserRepository): ViewModel() {
+class RegisterViewModel(private val userRepository: UserRepository): ViewModel() {
 
     private var email:String? = null
     private var password:String? = null
 
-    private val loginModel: LoginModel
+    private val registerModel: RegisterModel
 
     init {
-        this.loginModel = LoginModel()
+        this.registerModel = RegisterModel()
     }
-
     var authListener: AuthListener? = null
     private val disposables = CompositeDisposable()
     val user by lazy { userRepository.currentUser() }
 
-    fun login(loginModel: LoginModel){
-        if (loginModel.email.isEmpty() || loginModel.password.isEmpty()){
+    fun signup(registerModel: RegisterModel){
+        registerModel.email = email.toString()
+        registerModel.password = password.toString()
+        if (email.isNullOrEmpty() || password.isNullOrEmpty()){
             authListener?.onFailure("Invalid email or password")
             return
         }
         authListener?.onStarted()
 
-        val disposable = userRepository.login(loginModel)
+        val disposable = userRepository.register(registerModel)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
@@ -46,14 +45,9 @@ class LoginViewModel(private val userRepository: UserRepository): ViewModel() {
         disposables.add(disposable)
     }
 
-    fun goToSignup(view: View){
-        Intent(view.context, RegisterActivity::class.java).also {
+    fun goToLogin(view: View){
+        Intent(view.context, LoginActivity::class.java).also {
             view.context.startActivity(it)
         }
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        disposables.dispose()
     }
 }

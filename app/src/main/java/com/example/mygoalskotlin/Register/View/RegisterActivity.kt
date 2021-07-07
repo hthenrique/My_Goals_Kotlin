@@ -1,4 +1,4 @@
-package com.example.mygoalskotlin.Register
+package com.example.mygoalskotlin.Register.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,6 +1,6 @@
 package com.example.mygoalskotlin.Login.Model
 
-class LoginModel {
+class Login {
     var email: String = ""
     var password: String = ""
 }

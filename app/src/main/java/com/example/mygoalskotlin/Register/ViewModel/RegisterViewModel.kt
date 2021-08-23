@@ -34,15 +34,6 @@ class RegisterViewModel(private val userRepository: UserRepository): ViewModel()
         }
         authListener?.onStarted()
 
-        val disposable = userRepository.register(registerModel)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                authListener?.onSuccess()
-            },{
-                authListener?.onFailure(it.message!!)
-            })
-        disposables.add(disposable)
     }
 
     fun goToLogin(view: View){

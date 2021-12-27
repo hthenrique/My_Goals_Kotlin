@@ -1,7 +1,7 @@
 package com.example.mygoalskotlin.Firebase
 
 import android.annotation.SuppressLint
-import com.example.mygoalskotlin.Login.Model.Login
+import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Register.Model.RegisterModel
 import com.google.firebase.auth.FirebaseAuth
 import io.reactivex.Completable
@@ -12,10 +12,10 @@ class FirebaseSource {
     }
 
     @SuppressLint("CheckResult")
-    fun login(login: Login): Boolean{
+    fun login(loginModel: LoginModel): Boolean{
         var success: Boolean = false
         Completable.create{ emitter ->
-            firebaseAuth.signInWithEmailAndPassword(login.email, login.password)
+            firebaseAuth.signInWithEmailAndPassword(loginModel.email, loginModel.password)
                 .addOnCompleteListener {
                     if (!emitter.isDisposed){
                         if (it.isSuccessful) {
@@ -33,10 +33,10 @@ class FirebaseSource {
     }
 
     @SuppressLint("CheckResult")
-    fun register(loginModel: RegisterModel): Boolean{
+    fun register(registerModel: RegisterModel): Boolean{
         var success: Boolean = false
         Completable.create{ emitter ->
-            firebaseAuth.signInWithEmailAndPassword(loginModel.email, loginModel.password)
+            firebaseAuth.signInWithEmailAndPassword(registerModel.email, registerModel.password)
                 .addOnCompleteListener {
                     if (!emitter.isDisposed){
                         if (it.isSuccessful) {

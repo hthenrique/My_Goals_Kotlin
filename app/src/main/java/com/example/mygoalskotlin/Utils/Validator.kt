@@ -4,7 +4,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
-class Controller {
+class Validator {
 
     fun isValidEmail(email: String?): Boolean{
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()

@@ -5,11 +5,9 @@ import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.Firebase.UserRepository
-import com.example.mygoalskotlin.Login.Model.Login
+import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Register.View.RegisterActivity
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 
 
 class LoginViewModel(private val userRepository: UserRepository): ViewModel() {
@@ -17,18 +15,18 @@ class LoginViewModel(private val userRepository: UserRepository): ViewModel() {
     private var email:String? = null
     private var password:String? = null
 
-    private val login: Login
+    private val loginModel: LoginModel
 
     init {
-        this.login = Login()
+        this.loginModel = LoginModel()
     }
 
     var authListener: AuthListener? = null
     private val disposables = CompositeDisposable()
     val user by lazy { userRepository.currentUser() }
 
-    fun login(login: Login){
-        if (login.email.isEmpty() || login.password.isEmpty()){
+    fun login(loginModel: LoginModel){
+        if (loginModel.email.isEmpty() || loginModel.password.isEmpty()){
             authListener?.onFailure("Invalid email or password")
             return
         }

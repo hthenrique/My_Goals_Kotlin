@@ -1,47 +1,68 @@
 package com.example.mygoalskotlin.Login.View
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.Preference
 import com.example.mygoalskotlin.Firebase.FirebaseSource
 import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Main.MainActivity
 import com.example.mygoalskotlin.R
 import com.example.mygoalskotlin.Register.View.RegisterActivity
+import com.example.mygoalskotlin.Utils.MessagesConstants
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityLoginBinding
+import com.example.mygoalskotlin.model.User
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.gson.Gson
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
 
+    private var mockEmail = "henrique@gmail.com"
+    private var mockpassword = "Henrique#3"
+
     private val loginModel: LoginModel by lazy { LoginModel() }
     private val firebaseSource: FirebaseSource by lazy { FirebaseSource() }
     private val validator: Validator by lazy { Validator() }
+    private var firebaseAuth: FirebaseAuth? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(this)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.editTextEmail.setText(mockEmail)
+        binding.editTextPassword.setText(mockpassword)
 
         setupButtonClicked()
     }
 
     private fun setupButtonClicked() {
         binding.buttonLogin.setOnClickListener {
+
             loginModel.email = binding.editTextEmail.text.toString().trim()
             loginModel.password = binding.editTextPassword.text.toString().trim()
 
             if (validator.isValidEmail(loginModel.email)){
                 if (validator.isValidPassword(loginModel.password)){
-                    loginUser()
+                    firebaseRequest()
                 }else{
                     binding.editTextPassword.error = getString(R.string.password_Requirements)
-                    Toast.makeText(this, "Senha inválida", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, MessagesConstants.INVALID_PASSWORD, Toast.LENGTH_LONG).show()
                 }
             }else{
-                Toast.makeText(this, "Email inválido", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, MessagesConstants.INVALID_EMAIL, Toast.LENGTH_LONG).show()
             }
         }
 
@@ -51,19 +72,39 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun loginUser() {
-        val firebaseReturn = firebaseSource.login(loginModel)
-        if (firebaseReturn){
-            val loginIntent: Intent = Intent(this, MainActivity::class.java)
-            startActivity(loginIntent)
-            finish()
-            Toast.makeText(this, firebaseSource.login(loginModel).toString(), Toast.LENGTH_LONG).show()
-        }else{
-            Toast.makeText(this, "Usuário inexistente", Toast.LENGTH_LONG).show()
-            registerUser()
-        }
+    private fun firebaseRequest(){
+        firebaseAuth?.signInWithEmailAndPassword(loginModel.email, loginModel.password)
+            ?.addOnCompleteListener {
+                if (it.isSuccessful){
+                    loginUser()
+                }else{
+                    Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
+                    registerUser()
+                }
+            }
     }
 
+    private fun loginUser() {
+        val loginIntent: Intent = Intent(this, MainActivity::class.java)
+        startActivity(loginIntent)
+        //saveUserInDevice()
+        finish()
+    }
+
+    @SuppressLint("CommitPrefEdits")
+    private fun saveUserInDevice() {
+        val userToSave: User = User()
+        val gson: Gson = Gson()
+
+        userToSave.email = binding.editTextEmail.text.toString()
+        userToSave.password = binding.editTextPassword.text.toString()
+
+        val objToJson: String = gson.toJson(userToSave)
+        val sharedPreferences: SharedPreferences = getPreferences(MODE_PRIVATE)
+        val prefsEditor = sharedPreferences.edit()
+        prefsEditor.putString("UserSaved", objToJson)
+        prefsEditor.apply()
+    }
 
     private fun registerUser(){
         val registerIntent: Intent = Intent(this, RegisterActivity::class.java)

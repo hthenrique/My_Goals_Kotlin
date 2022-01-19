@@ -1,59 +1,46 @@
 package com.example.mygoalskotlin.Firebase
 
 import android.annotation.SuppressLint
-import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Register.Model.RegisterModel
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import io.reactivex.Completable
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+
 
 class FirebaseSource {
-    private val firebaseAuth: FirebaseAuth by lazy {
-        FirebaseAuth.getInstance()
-    }
+
+    private var firebaseAuth: FirebaseAuth? = null
+    private lateinit var authListener: FirebaseAuth.AuthStateListener
+    private lateinit var firebaseApp: FirebaseApp
 
     @SuppressLint("CheckResult")
-    fun login(loginModel: LoginModel): Boolean{
+    fun register(registerModel: RegisterModel):Boolean{
         var success: Boolean = false
-        Completable.create{ emitter ->
-            firebaseAuth.signInWithEmailAndPassword(loginModel.email, loginModel.password)
-                .addOnCompleteListener {
-                    if (!emitter.isDisposed){
-                        if (it.isSuccessful) {
-                            success = true
-                            emitter.onComplete()
-                        }
-                        else {
-                            success = false
-                            emitter.onError(it.exception!!)
-                        }
+        if (registerModel!=null){
+            firebaseAuth?.createUserWithEmailAndPassword(registerModel.email, registerModel.password)
+                ?.addOnCompleteListener {
+                    if (it.isSuccessful){
+                        success = it.isSuccessful
                     }
                 }
         }
         return success
     }
 
-    @SuppressLint("CheckResult")
-    fun register(registerModel: RegisterModel): Boolean{
-        var success: Boolean = false
-        Completable.create{ emitter ->
-            firebaseAuth.signInWithEmailAndPassword(registerModel.email, registerModel.password)
-                .addOnCompleteListener {
-                    if (!emitter.isDisposed){
-                        if (it.isSuccessful) {
-                            success = true
-                            emitter.onComplete()
-                        }
-                        else {
-                            success = false
-                            emitter.onError(it.exception!!)
-                        }
-                    }
-                }
+    fun logout() = firebaseAuth?.signOut()
+
+    fun currentUser(): UserFirebase {
+        val userFirebase: UserFirebase = UserFirebase()
+        val firebaseUser = Firebase.auth.currentUser
+
+        if (firebaseUser!= null){
+            userFirebase.uid = firebaseUser.uid
+            userFirebase.name = firebaseUser.displayName
+            userFirebase.email = firebaseUser.email
+            userFirebase.isAuthenticated = true
+            userFirebase.isCreated = true
         }
-        return success
+        return userFirebase
     }
-
-    fun logout() = firebaseAuth.signOut()
-
-    fun currentUser() = firebaseAuth.currentUser
 }

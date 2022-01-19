@@ -8,6 +8,8 @@ import com.example.mygoalskotlin.Firebase.FirebaseSource
 import com.example.mygoalskotlin.Register.Model.RegisterModel
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
@@ -15,9 +17,14 @@ class RegisterActivity : AppCompatActivity() {
     private val firebaseSource: FirebaseSource by lazy { FirebaseSource() }
     private val validator: Validator by lazy { Validator() }
     private val registerModel: RegisterModel by lazy { RegisterModel() }
+    //private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseApp.initializeApp(baseContext)
+        firebaseAuth = FirebaseAuth.getInstance()
+
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -56,7 +63,6 @@ class RegisterActivity : AppCompatActivity() {
     private fun isValidUser(valid: Boolean){
         if (valid){
             firebaseSource.register(registerModel)
-            onBackPressed()
         }
     }
 }

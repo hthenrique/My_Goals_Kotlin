@@ -1,14 +1,12 @@
 package com.example.mygoalskotlin.Login.View
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.preference.Preference
-import com.example.mygoalskotlin.Firebase.FirebaseSource
 import com.example.mygoalskotlin.Login.Model.LoginModel
 import com.example.mygoalskotlin.Main.MainActivity
 import com.example.mygoalskotlin.R
@@ -19,7 +17,6 @@ import com.example.mygoalskotlin.databinding.ActivityLoginBinding
 import com.example.mygoalskotlin.model.User
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.gson.Gson
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
     private var mockpassword = "Henrique#3"
 
     private val loginModel: LoginModel by lazy { LoginModel() }
-    private val firebaseSource: FirebaseSource by lazy { FirebaseSource() }
     private val validator: Validator by lazy { Validator() }
     private var firebaseAuth: FirebaseAuth? = null
 
@@ -77,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
             ?.addOnCompleteListener {
                 if (it.isSuccessful){
                     loginUser()
+                    saveUserInSharedPrefs()
                 }else{
                     Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
                     registerUser()
@@ -84,26 +81,27 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    private fun loginUser() {
-        val loginIntent: Intent = Intent(this, MainActivity::class.java)
-        startActivity(loginIntent)
-        //saveUserInDevice()
-        finish()
-    }
-
     @SuppressLint("CommitPrefEdits")
-    private fun saveUserInDevice() {
+    private fun saveUserInSharedPrefs() {
         val userToSave: User = User()
-        val gson: Gson = Gson()
 
         userToSave.email = binding.editTextEmail.text.toString()
         userToSave.password = binding.editTextPassword.text.toString()
 
-        val objToJson: String = gson.toJson(userToSave)
-        val sharedPreferences: SharedPreferences = getPreferences(MODE_PRIVATE)
-        val prefsEditor = sharedPreferences.edit()
-        prefsEditor.putString("UserSaved", objToJson)
+        val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
+        val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
+        prefsEditor.putBoolean("isUserLogin", true)
+        prefsEditor.putString("email", userToSave.email)
+        prefsEditor.putString("password", userToSave.password)
         prefsEditor.apply()
+        prefsEditor.commit()
+
+    }
+
+    private fun loginUser() {
+        val loginIntent: Intent = Intent(this, MainActivity::class.java)
+        startActivity(loginIntent)
+        finish()
     }
 
     private fun registerUser(){

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/henrique/StudioProjects/my-goals/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_splash.xml",
+        "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/home/henrique/StudioProjects/my-goals/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/henrique/StudioProjects/my-goals/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_register.xml",
+        "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/home/henrique/StudioProjects/my-goals/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/layout/activity_main.xml"
+    }
+]

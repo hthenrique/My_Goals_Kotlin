@@ -4,4 +4,6 @@
     <string name="password">Password</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="password_Requirements">Sua senha deve conter no mínimo 8 caracteres, 1 letra maiuscula, 1 letra minuscula, 1 número e 1 caractere especial.</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
 </resources>

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mygoalskotlin.Firebase.FirebaseSource
 import com.example.mygoalskotlin.Register.Model.RegisterModel
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
@@ -14,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
-    private val firebaseSource: FirebaseSource by lazy { FirebaseSource() }
     private val validator: Validator by lazy { Validator() }
     private val registerModel: RegisterModel by lazy { RegisterModel() }
     //private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -62,7 +60,14 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isValidUser(valid: Boolean){
         if (valid){
-            firebaseSource.register(registerModel)
+            firebaseAuth?.createUserWithEmailAndPassword(registerModel.email, registerModel.password)
+                ?.addOnCompleteListener {
+                    if (it.isSuccessful){
+                        onBackPressed()
+                    }else{
+                        Toast.makeText(this, "Não foi possível criar o usuário", Toast.LENGTH_LONG).show()
+                    }
+                }
         }
     }
 }

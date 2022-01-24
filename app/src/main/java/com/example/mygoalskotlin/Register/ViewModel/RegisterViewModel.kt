@@ -4,14 +4,11 @@ import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
-import com.example.mygoalskotlin.Firebase.UserRepository
 import com.example.mygoalskotlin.Login.View.LoginActivity
 import com.example.mygoalskotlin.Register.Model.RegisterModel
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 
-class RegisterViewModel(private val userRepository: UserRepository): ViewModel() {
+class RegisterViewModel(): ViewModel() {
 
     private var email:String? = null
     private var password:String? = null
@@ -23,7 +20,6 @@ class RegisterViewModel(private val userRepository: UserRepository): ViewModel()
     }
     var authListener: AuthListener? = null
     private val disposables = CompositeDisposable()
-    val user by lazy { userRepository.currentUser() }
 
     fun signup(registerModel: RegisterModel){
         registerModel.email = email.toString()

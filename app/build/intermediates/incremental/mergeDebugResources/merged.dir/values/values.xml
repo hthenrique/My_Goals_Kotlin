@@ -493,8 +493,8 @@
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="preference_fallback_accent_color">#ff008577</color>
-    <color name="primaryColor">#23e564</color>
-    <color name="primaryDarkColor">#00b134</color>
+    <color name="primaryColor">#60ad5e</color>
+    <color name="primaryDarkColor">#2e7d32</color>
     <color name="primaryLightColor">#6fff94</color>
     <color name="primaryTextColor">#000000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>

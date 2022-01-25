@@ -175,11 +175,9 @@
                 {
                     "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,6,-1,-1,7",
-                        "startColumns": "-1,-1,-1,4,-1,-1,4",
-                        "startOffsets": "-1,-1,-1,391,-1,-1,434",
-                        "endColumns": "-1,-1,-1,41,-1,-1,45",
-                        "endOffsets": "-1,-1,-1,428,-1,-1,475"
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "1083,1110,1113,1127,1179,1180,1191",
@@ -237,9 +235,11 @@
                 {
                     "source": "/home/henrique/StudioProjects/my-goals/app/src/main/res/values/colors.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                        "startLines": "2,4,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "4,4,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "57,158,-1,-1,-1,-1,-1,-1,-1",
+                        "endColumns": "46,50,-1,-1,-1,-1,-1,-1,-1",
+                        "endOffsets": "99,204,-1,-1,-1,-1,-1,-1,-1"
                     },
                     "to": {
                         "startLines": "495,496,497,498,509,510,511,512,523",

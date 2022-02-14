@@ -1,5 +1,6 @@
 package com.example.mygoalskotlin.Main
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private var firebaseAuth: FirebaseAuth? = FirebaseAuth.getInstance()
     private val currentUser = getLoggedUser()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,12 +34,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Toast.makeText(this, currentUser.email, Toast.LENGTH_LONG).show()
-        binding.helloWorld.text = currentUser.email
 
-        binding.getUserButton.setOnClickListener {
-            Toast.makeText(this, currentUser.email, Toast.LENGTH_LONG).show()
-        }
-
+        binding.welcomeUser.text = "Welcome! " + currentUser.name
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

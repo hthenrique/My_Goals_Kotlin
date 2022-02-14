@@ -1989,7 +1989,6 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
-id getUserButton
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2000,7 +1999,6 @@ id grouping
 id groups
 id guideline
 id header_title
-id helloWorld
 id hideable
 id home
 id homeAsUp
@@ -2117,6 +2115,7 @@ id percent
 id pin
 id position
 id postLayout
+id profile
 id progress_circular
 id progress_horizontal
 id radio
@@ -2253,6 +2252,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id welcomeUser
 id wide
 id withText
 id withinBounds
@@ -2561,6 +2561,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string preference_copied
+string profile
 string project_id
 string search_menu_title
 string settings

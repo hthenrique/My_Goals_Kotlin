@@ -4,7 +4,6 @@ package com.example.mygoalskotlin.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,16 +20,11 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button getUserButton;
+  public final TextView welcomeUser;
 
-  @NonNull
-  public final TextView helloWorld;
-
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button getUserButton,
-      @NonNull TextView helloWorld) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView welcomeUser) {
     this.rootView = rootView;
-    this.getUserButton = getUserButton;
-    this.helloWorld = helloWorld;
+    this.welcomeUser = welcomeUser;
   }
 
   @Override
@@ -60,19 +54,13 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.getUserButton;
-      Button getUserButton = ViewBindings.findChildViewById(rootView, id);
-      if (getUserButton == null) {
+      id = R.id.welcomeUser;
+      TextView welcomeUser = ViewBindings.findChildViewById(rootView, id);
+      if (welcomeUser == null) {
         break missingId;
       }
 
-      id = R.id.helloWorld;
-      TextView helloWorld = ViewBindings.findChildViewById(rootView, id);
-      if (helloWorld == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, getUserButton, helloWorld);
+      return new ActivityMainBinding((ConstraintLayout) rootView, welcomeUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

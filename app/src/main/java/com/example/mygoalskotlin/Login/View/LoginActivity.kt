@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
     private val loginModel: LoginModel by lazy { LoginModel() }
     private val validator: Validator by lazy { Validator() }
     private var firebaseAuth: FirebaseAuth? = null
+    private val user: User = User()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,16 +84,15 @@ class LoginActivity : AppCompatActivity() {
 
     @SuppressLint("CommitPrefEdits")
     private fun saveUserInSharedPrefs() {
-        val userToSave: User = User()
 
-        userToSave.email = binding.editTextEmail.text.toString()
-        userToSave.password = binding.editTextPassword.text.toString()
+        user.email = binding.editTextEmail.text.toString()
+        user.password = binding.editTextPassword.text.toString()
 
         val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
         prefsEditor.putBoolean("isUserLogin", true)
-        prefsEditor.putString("email", userToSave.email)
-        prefsEditor.putString("password", userToSave.password)
+        prefsEditor.putString("email", user.email)
+        prefsEditor.putString("password", user.password)
         prefsEditor.apply()
         prefsEditor.commit()
 
@@ -106,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun registerUser(){
         val registerIntent: Intent = Intent(this, RegisterActivity::class.java)
-        registerIntent.putExtra("email", binding.editTextEmail.text.toString().trim())
+        registerIntent.putExtra("email", user.email)
         startActivity(registerIntent)
     }
 }

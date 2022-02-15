@@ -8,13 +8,13 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 class AuthAppRepository {
-    private lateinit var application: Application
+    private var application: Application
     private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var userLiveData: MutableLiveData<FirebaseUser>
     private lateinit var loggedOutLiveData: MutableLiveData<Boolean>
 
-    fun AuthAppRepository(application: Application){
+    constructor(application: Application){
         this.application = application
         this.firebaseAuth = FirebaseAuth.getInstance()
         this.userLiveData = MutableLiveData()

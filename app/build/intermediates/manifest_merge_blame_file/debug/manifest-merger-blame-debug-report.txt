@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+8-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+9-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\X264742\.gradle\caches\transforms-3\93554a624974b8b48d538d207bb87cbc\transformed\firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
@@ -27,49 +27,49 @@
 15-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\X264742\.gradle\caches\transforms-3\47a07a2bdf083052a5113399134a4acc\transformed\play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
 16
 17    <application
-17-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:5:5-24:19
+17-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:5:5-24:19
 18        android:allowBackup="true"
-18-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:6:9-35
+18-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.5.0] C:\Users\X264742\.gradle\caches\transforms-3\e992abf616645acd04963b189806b01e\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:7:9-43
+21-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:7:9-43
 22        android:label="@string/app_name"
-22-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:8:9-41
+22-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:8:9-41
 23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:9:9-54
+23-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:9:9-54
 24        android:supportsRtl="true"
-24-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:10:9-35
+24-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:10:9-35
 25        android:testOnly="true"
 26        android:theme="@style/Theme.MyGoalsKotlin" >
-26-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:11:9-51
+26-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:11:9-51
 27        <activity android:name="com.example.mygoalskotlin.Register.View.RegisterActivity" />
-27-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:12:9-68
-27-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:12:19-65
+27-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-68
+27-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:19-65
 28        <activity android:name="com.example.mygoalskotlin.Login.View.LoginActivity" />
-28-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:13:9-62
-28-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:13:19-59
+28-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:9-62
+28-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:19-59
 29        <activity
-29-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:14:9-22:20
+29-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:9-22:20
 30            android:name="com.example.mygoalskotlin.Splash.SplashActivity"
-30-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:15:13-50
+30-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-50
 31            android:theme="@style/Theme.AppCompat.NoActionBar" >
-31-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:16:13-63
+31-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:13-63
 32            <intent-filter>
-32-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:17:13-21:29
+32-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:17:13-21:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:18:17-69
-33-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:18:25-66
+33-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:17-69
+33-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:20:17-77
-35-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:20:27-74
+35-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:17-77
+35-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:27-74
 36            </intent-filter>
 37        </activity>
 38        <activity android:name="com.example.mygoalskotlin.Main.MainActivity" />
-38-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:23:9-55
-38-->C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:23:19-52
+38-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:9-55
+38-->C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:19-52
 39
 40        <service
 40-->[com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\X264742\.gradle\caches\transforms-3\5d4938d51ad50c6bf0626ade56a95db2\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:8:9-14:19

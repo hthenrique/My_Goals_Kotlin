@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\X264742\\.gradle\\caches\\transforms-3\\3bb5e1359fa9ce8b9a12240389ef2fb3\\transformed\\recyclerview-1.1.0\\res\\values\\values.xml",
@@ -56,40 +56,6 @@
                         "startOffsets": "57667,57724,59118",
                         "endColumns": "56,42,40",
                         "endOffsets": "57719,57762,59154"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,281,385,494,614,712",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "194,276,380,489,609,707,782"
-                    },
-                    "to": {
-                        "startLines": "1112,1119,1120,1121,1122,1123,1189",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "67094,67805,67887,67991,68100,68220,78587",
-                        "endColumns": "143,81,103,108,119,97,74",
-                        "endOffsets": "67233,67882,67986,68095,68215,68313,78657"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1,4,2,6,3,5,7",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "17,161,71,391,114,223,434",
-                        "endColumns": "52,60,41,41,45,166,45",
-                        "endOffsets": "65,217,108,428,155,385,475"
-                    },
-                    "to": {
-                        "startLines": "1083,1110,1113,1127,1179,1180,1191",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "63665,66995,67238,68684,77432,77478,78715",
-                        "endColumns": "52,60,41,41,45,166,45",
-                        "endOffsets": "63713,67051,67275,68721,77473,77640,78756"
                     }
                 },
                 {
@@ -179,42 +145,6 @@
                         "startOffsets": "20081,20139,20205,20268,33324,33395",
                         "endColumns": "57,65,62,61,70,71",
                         "endOffsets": "20134,20200,20263,20325,33390,33462"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,4,3,8,5,7,6,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "57,158,105,369,210,315,260,421,475",
-                        "endColumns": "46,50,51,50,48,52,53,52,39",
-                        "endOffsets": "99,204,152,415,254,363,309,469,510"
-                    },
-                    "to": {
-                        "startLines": "495,496,497,498,509,510,511,512,523",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "25907,25954,26005,26057,26811,26860,26913,26967,27723",
-                        "endColumns": "46,50,51,50,48,52,53,52,39",
-                        "endOffsets": "25949,26000,26052,26103,26855,26908,26962,27015,27758"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "886"
-                    },
-                    "to": {
-                        "startLines": "4015",
-                        "startColumns": "4",
-                        "startOffsets": "266284",
-                        "endLines": "4027",
-                        "endColumns": "12",
-                        "endOffsets": "267054"
                     }
                 },
                 {
@@ -362,6 +292,40 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1,4,2,6,3,5,7",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "17,161,71,391,114,223,434",
+                        "endColumns": "52,60,41,41,45,166,45",
+                        "endOffsets": "65,217,108,428,155,385,475"
+                    },
+                    "to": {
+                        "startLines": "1083,1110,1113,1127,1179,1180,1191",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "63665,66995,67238,68684,77432,77478,78715",
+                        "endColumns": "52,60,41,41,45,166,45",
+                        "endOffsets": "63713,67051,67275,68721,77473,77640,78756"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,281,385,494,614,712",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "194,276,380,489,609,707,782"
+                    },
+                    "to": {
+                        "startLines": "1112,1119,1120,1121,1122,1123,1189",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "67094,67805,67887,67991,68100,68220,78587",
+                        "endColumns": "143,81,103,108,119,97,74",
+                        "endOffsets": "67233,67882,67986,68095,68215,68313,78657"
+                    }
+                },
+                {
                     "source": "C:\\Users\\X264742\\.gradle\\caches\\transforms-3\\ce42a8b1154f5251845c02d15582d510\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,16",
@@ -378,6 +342,23 @@
                         "endLines": "50,5112,6525,6614",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "2554,337966,426611,431822"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,4,3,8,5,7,6,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "57,158,105,369,210,315,260,421,475",
+                        "endColumns": "46,50,51,50,48,52,53,52,39",
+                        "endOffsets": "99,204,152,415,254,363,309,469,510"
+                    },
+                    "to": {
+                        "startLines": "495,496,497,498,509,510,511,512,523",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "25907,25954,26005,26057,26811,26860,26913,26967,27723",
+                        "endColumns": "46,50,51,50,48,52,53,52,39",
+                        "endOffsets": "25949,26000,26052,26103,26855,26908,26962,27015,27758"
                     }
                 },
                 {
@@ -416,6 +397,25 @@
                         "endLines": "419,420,421,422,423,424,425,426,1092,1093,1094,1095,1096,1097,1098,1099,1101,1102,1103,1104,1105,1106,1107,1108,1109,7007,7858",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "20779,20859,20949,21039,21119,21200,21280,21360,64762,64943,65068,65175,65355,65478,65594,65697,66052,66157,66338,66463,66638,66786,66849,66911,66990,459405,505042"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "886"
+                    },
+                    "to": {
+                        "startLines": "4015",
+                        "startColumns": "4",
+                        "startOffsets": "266284",
+                        "endLines": "4027",
+                        "endColumns": "12",
+                        "endOffsets": "267054"
                     }
                 },
                 {

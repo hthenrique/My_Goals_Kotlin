@@ -1,40 +1,29 @@
 package com.example.mygoalskotlin.Register.ViewModel
 
+import android.app.Application
 import android.content.Intent
 import android.view.View
+import androidx.annotation.NonNull
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.mygoalskotlin.Firebase.AuthAppRepository
 import com.example.mygoalskotlin.Firebase.AuthListener
 import com.example.mygoalskotlin.Login.View.LoginActivity
 import com.example.mygoalskotlin.Register.Model.RegisterDTO
+import com.google.firebase.auth.FirebaseUser
 import io.reactivex.disposables.CompositeDisposable
 
-class RegisterViewModel(): ViewModel() {
+
+class RegisterViewModel(@NonNull application: Application): ViewModel() {
+    private var authAppRepository: AuthAppRepository = AuthAppRepository(application)
+    private var userLiveData: MutableLiveData<FirebaseUser> = authAppRepository.getUserLiveData()
 
     private var email:String? = null
     private var password:String? = null
 
-    private val registerDTO: RegisterDTO
-
-    init {
-        this.registerDTO = RegisterDTO()
-    }
     var authListener: AuthListener? = null
-    private val disposables = CompositeDisposable()
 
-    fun signup(registerDTO: RegisterDTO){
-        registerDTO.email = email.toString()
-        registerDTO.password = password.toString()
-        if (email.isNullOrEmpty() || password.isNullOrEmpty()){
-            authListener?.onFailure("Invalid email or password")
-            return
-        }
-        authListener?.onStarted()
-
-    }
-
-    fun goToLogin(view: View){
-        Intent(view.context, LoginActivity::class.java).also {
-            view.context.startActivity(it)
-        }
+    fun register(registerDTO: RegisterDTO){
+        authAppRepository.registerUserOnFirebase(registerDTO)
     }
 }

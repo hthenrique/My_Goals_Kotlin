@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
-        "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\X264742\\Documents\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
-        "source": "C:\\Users\\X264742\\Documents\\my-goals\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\Users\\X264742\\AndroidStudioProjects\\my-goals\\app\\src\\main\\res\\layout\\activity_login.xml"
     }
 ]

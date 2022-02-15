@@ -4,7 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.mygoalskotlin.Register.Model.RegisterDTO
+import com.example.mygoalskotlin.Register.ViewModel.RegisterViewModel
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
 import com.google.firebase.FirebaseApp
@@ -12,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var registerViewModel: RegisterViewModel
 
     private val validator: Validator by lazy { Validator() }
     private val registerDTO: RegisterDTO by lazy { RegisterDTO() }
@@ -23,14 +27,10 @@ class RegisterActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(baseContext)
         firebaseAuth = FirebaseAuth.getInstance()
 
+        registerViewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val intent: Intent = getIntent()
-        if (intent != null){
-            registerDTO.email = intent.getStringExtra("email").toString()
-            binding.editTextRegisterEmail.setText(registerDTO.email)
-        }
 
         setupButtonRegister()
     }
@@ -60,14 +60,15 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isValidUser(valid: Boolean){
         if (valid){
-            firebaseAuth?.createUserWithEmailAndPassword(registerDTO.email, registerDTO.password)
+            registerViewModel.register(registerDTO)
+            /*firebaseAuth?.createUserWithEmailAndPassword(registerDTO.email, registerDTO.password)
                 ?.addOnCompleteListener {
                     if (it.isSuccessful){
                         onBackPressed()
                     }else{
                         Toast.makeText(this, "Não foi possível criar o usuário", Toast.LENGTH_LONG).show()
                     }
-                }
+                }*/
         }
     }
 }

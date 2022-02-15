@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\91760191425c5936244ef494baa2a6bf\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-ktx:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\1f14629e7737b8fb4c25dd0c064fd4da\transformed\databinding-ktx-7.0.4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\4b81757ae316b4316209740827abf99c\transformed\databinding-runtime-7.0.4\AndroidManifest.xml:17:1-22:12
@@ -86,25 +86,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\X264742\.gradle\
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\2eeb91c250ac4532315800d5c9bfcdfd\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\95c412ac4b6bba929ae8fe5e7c2e12fa\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\1da57053493f6b8938302e94dac170e2\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:1-26:12
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\X264742\.gradle\caches\transforms-3\5d4938d51ad50c6bf0626ade56a95db2\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\X264742\.gradle\caches\transforms-3\5d4938d51ad50c6bf0626ade56a95db2\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\X264742\.gradle\caches\transforms-3\f836699d828b8f15ef29f27eab003ada\transformed\firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
@@ -162,49 +162,49 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\X2
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\X264742\.gradle\caches\transforms-3\e992abf616645acd04963b189806b01e\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:11:9-51
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:11:9-51
 activity#com.example.mygoalskotlin.Register.View.RegisterActivity
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:12:9-68
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:9-68
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:12:19-65
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:12:19-65
 activity#com.example.mygoalskotlin.Login.View.LoginActivity
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:13:9-62
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:9-62
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:13:19-59
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:13:19-59
 activity#com.example.mygoalskotlin.Splash.SplashActivity
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:14:9-22:20
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:14:9-22:20
 	android:theme
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:16:13-63
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:15:13-50
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:15:13-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:18:17-69
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:20:17-77
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:20:27-74
 activity#com.example.mygoalskotlin.Main.MainActivity
-ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:23:9-55
+ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:9-55
 	android:name
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml:23:19-52
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml:23:19-52
 uses-sdk
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\91760191425c5936244ef494baa2a6bf\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-adapters:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\91760191425c5936244ef494baa2a6bf\transformed\databinding-adapters-7.0.4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:databinding-ktx:7.0.4] C:\Users\X264742\.gradle\caches\transforms-3\1f14629e7737b8fb4c25dd0c064fd4da\transformed\databinding-ktx-7.0.4\AndroidManifest.xml:20:5-44
@@ -369,16 +369,16 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\X264742\.gradle\caches\transfo
 MERGED from [androidx.print:print:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\95c412ac4b6bba929ae8fe5e7c2e12fa\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\1da57053493f6b8938302e94dac170e2\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\X264742\.gradle\caches\transforms-3\1da57053493f6b8938302e94dac170e2\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\X264742\Documents\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\X264742\AndroidStudioProjects\my-goals\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-analytics-ktx:19.0.0] C:\Users\X264742\.gradle\caches\transforms-3\5d4938d51ad50c6bf0626ade56a95db2\transformed\firebase-analytics-ktx-19.0.0\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\X264742\.gradle\caches\transforms-3\f836699d828b8f15ef29f27eab003ada\transformed\firebase-auth-ktx-21.0.1\AndroidManifest.xml:8:9-14:19

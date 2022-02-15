@@ -12,7 +12,7 @@ class UserFirebaseDTO: Serializable {
 
     var isCreated = false
 
-    fun UserFirebase(uid: String, name: String, email: String){
+    fun UserFirebaseDTO(uid: String, name: String, email: String){
         this.uid = uid
         this.name = name
         this.email = email

@@ -3,7 +3,7 @@ package com.example.mygoalskotlin.model
 import com.example.mygoalskotlin.Utils.Validator
 import java.io.Serializable
 
-class User : Serializable {
+class UserDTO : Serializable {
     var name: String? = null
     var email: String? = null
     var password: String? = null

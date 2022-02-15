@@ -7,14 +7,14 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mygoalskotlin.Login.Model.LoginModel
+import com.example.mygoalskotlin.Login.Model.LoginDTO
 import com.example.mygoalskotlin.Main.MainActivity
 import com.example.mygoalskotlin.R
 import com.example.mygoalskotlin.Register.View.RegisterActivity
 import com.example.mygoalskotlin.Utils.MessagesConstants
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityLoginBinding
-import com.example.mygoalskotlin.model.User
+import com.example.mygoalskotlin.model.UserDTO
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
     private var mockEmail = "henrique@gmail.com"
     private var mockpassword = "Henrique#3"
 
-    private val loginModel: LoginModel by lazy { LoginModel() }
+    private val loginDTO: LoginDTO by lazy { LoginDTO() }
     private val validator: Validator by lazy { Validator() }
     private var firebaseAuth: FirebaseAuth? = null
 
@@ -47,11 +47,11 @@ class LoginActivity : AppCompatActivity() {
     private fun setupButtonClicked() {
         binding.buttonLogin.setOnClickListener {
 
-            loginModel.email = binding.editTextEmail.text.toString().trim()
-            loginModel.password = binding.editTextPassword.text.toString().trim()
+            loginDTO.email = binding.editTextEmail.text.toString().trim()
+            loginDTO.password = binding.editTextPassword.text.toString().trim()
 
-            if (validator.isValidEmail(loginModel.email)){
-                if (validator.isValidPassword(loginModel.password)){
+            if (validator.isValidEmail(loginDTO.email)){
+                if (validator.isValidPassword(loginDTO.password)){
                     firebaseRequest()
                 }else{
                     binding.editTextPassword.error = getString(R.string.password_Requirements)
@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun firebaseRequest(){
-        firebaseAuth?.signInWithEmailAndPassword(loginModel.email, loginModel.password)
+        firebaseAuth?.signInWithEmailAndPassword(loginDTO.email, loginDTO.password)
             ?.addOnCompleteListener {
                 if (it.isSuccessful){
                     loginUser()
@@ -83,16 +83,16 @@ class LoginActivity : AppCompatActivity() {
 
     @SuppressLint("CommitPrefEdits")
     private fun saveUserInSharedPrefs() {
-        val userToSave: User = User()
+        val userDTOToSave: UserDTO = UserDTO()
 
-        userToSave.email = binding.editTextEmail.text.toString()
-        userToSave.password = binding.editTextPassword.text.toString()
+        userDTOToSave.email = binding.editTextEmail.text.toString()
+        userDTOToSave.password = binding.editTextPassword.text.toString()
 
         val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
         prefsEditor.putBoolean("isUserLogin", true)
-        prefsEditor.putString("email", userToSave.email)
-        prefsEditor.putString("password", userToSave.password)
+        prefsEditor.putString("email", userDTOToSave.email)
+        prefsEditor.putString("password", userDTOToSave.password)
         prefsEditor.apply()
         prefsEditor.commit()
 

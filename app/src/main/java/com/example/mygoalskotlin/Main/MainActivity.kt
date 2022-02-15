@@ -9,7 +9,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
-import com.example.mygoalskotlin.Firebase.UserFirebase
+import com.example.mygoalskotlin.Firebase.UserFirebaseDTO
 import com.example.mygoalskotlin.Login.View.LoginActivity
 import com.example.mygoalskotlin.R
 import com.example.mygoalskotlin.databinding.ActivityMainBinding
@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
         backToLogin()
     }
 
-    private fun getLoggedUser(): UserFirebase {
-        val userFirebase = UserFirebase()
+    private fun getLoggedUser(): UserFirebaseDTO {
+        val userFirebase = UserFirebaseDTO()
         val firebaseUser = Firebase.auth.currentUser
 
         if (firebaseUser!= null){

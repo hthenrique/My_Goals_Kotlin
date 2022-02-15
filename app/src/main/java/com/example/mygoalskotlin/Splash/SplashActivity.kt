@@ -6,17 +6,14 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import com.example.mygoalskotlin.Login.View.LoginActivity
 import com.example.mygoalskotlin.Main.MainActivity
 import com.example.mygoalskotlin.R
-import com.example.mygoalskotlin.model.User
-import com.google.firebase.FirebaseApp
+import com.example.mygoalskotlin.model.UserDTO
 import com.google.firebase.auth.FirebaseAuth
-import com.google.gson.Gson
 
 class SplashActivity : AppCompatActivity() {
-    private var user: User = User()
+    private var userDTO: UserDTO = UserDTO()
     private var firebaseAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

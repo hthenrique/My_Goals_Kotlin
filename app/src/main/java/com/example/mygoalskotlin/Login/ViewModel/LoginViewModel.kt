@@ -4,7 +4,7 @@ import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.mygoalskotlin.Firebase.AuthListener
-import com.example.mygoalskotlin.Login.Model.LoginModel
+import com.example.mygoalskotlin.Login.Model.LoginDTO
 import com.example.mygoalskotlin.Register.View.RegisterActivity
 import io.reactivex.disposables.CompositeDisposable
 
@@ -14,17 +14,17 @@ class LoginViewModel(): ViewModel() {
     private var email:String? = null
     private var password:String? = null
 
-    private val loginModel: LoginModel
+    private val loginDTO: LoginDTO
 
     init {
-        this.loginModel = LoginModel()
+        this.loginDTO = LoginDTO()
     }
 
     var authListener: AuthListener? = null
     private val disposables = CompositeDisposable()
 
-    fun login(loginModel: LoginModel){
-        if (loginModel.email.isEmpty() || loginModel.password.isEmpty()){
+    fun login(loginDTO: LoginDTO){
+        if (loginDTO.email.isEmpty() || loginDTO.password.isEmpty()){
             authListener?.onFailure("Invalid email or password")
             return
         }

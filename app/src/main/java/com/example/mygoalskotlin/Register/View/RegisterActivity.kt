@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mygoalskotlin.Register.Model.RegisterModel
+import com.example.mygoalskotlin.Register.Model.RegisterDTO
 import com.example.mygoalskotlin.Utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
 import com.google.firebase.FirebaseApp
@@ -14,7 +14,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
     private val validator: Validator by lazy { Validator() }
-    private val registerModel: RegisterModel by lazy { RegisterModel() }
+    private val registerDTO: RegisterDTO by lazy { RegisterDTO() }
     //private var firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private var firebaseAuth: FirebaseAuth? = null
 
@@ -28,8 +28,8 @@ class RegisterActivity : AppCompatActivity() {
 
         val intent: Intent = getIntent()
         if (intent != null){
-            registerModel.email = intent.getStringExtra("email").toString()
-            binding.editTextRegisterEmail.setText(registerModel.email)
+            registerDTO.email = intent.getStringExtra("email").toString()
+            binding.editTextRegisterEmail.setText(registerDTO.email)
         }
 
         setupButtonRegister()
@@ -38,13 +38,13 @@ class RegisterActivity : AppCompatActivity() {
     private fun setupButtonRegister() {
 
         binding.buttonCreateUser.setOnClickListener {
-            registerModel.email = binding.editTextRegisterEmail.text.toString().trim()
-            registerModel.password = binding.editTextPassword.text.toString().trim()
-            registerModel.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()
+            registerDTO.email = binding.editTextRegisterEmail.text.toString().trim()
+            registerDTO.password = binding.editTextPassword.text.toString().trim()
+            registerDTO.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()
 
-            if (validator.isValidEmail(registerModel.email)){
-                if (registerModel.password == registerModel.confirmPassword){
-                    if (validator.isValidPassword(registerModel.password)){
+            if (validator.isValidEmail(registerDTO.email)){
+                if (registerDTO.password == registerDTO.confirmPassword){
+                    if (validator.isValidPassword(registerDTO.password)){
                         isValidUser(true)
                     }else{
                         Toast.makeText(this, "Senha inválida", Toast.LENGTH_LONG).show()
@@ -60,7 +60,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isValidUser(valid: Boolean){
         if (valid){
-            firebaseAuth?.createUserWithEmailAndPassword(registerModel.email, registerModel.password)
+            firebaseAuth?.createUserWithEmailAndPassword(registerDTO.email, registerDTO.password)
                 ?.addOnCompleteListener {
                     if (it.isSuccessful){
                         onBackPressed()

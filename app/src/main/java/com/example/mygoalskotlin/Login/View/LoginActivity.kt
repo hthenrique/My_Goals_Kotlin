@@ -83,16 +83,12 @@ class LoginActivity : AppCompatActivity() {
 
     @SuppressLint("CommitPrefEdits")
     private fun saveUserInSharedPrefs() {
-        val userToSave: User = User()
-
-        userToSave.email = binding.editTextEmail.text.toString()
-        userToSave.password = binding.editTextPassword.text.toString()
 
         val sharedPreferences: SharedPreferences = getSharedPreferences("UserSaved", Context.MODE_PRIVATE)
         val prefsEditor: SharedPreferences.Editor = sharedPreferences.edit()
         prefsEditor.putBoolean("isUserLogin", true)
-        prefsEditor.putString("email", userToSave.email)
-        prefsEditor.putString("password", userToSave.password)
+        prefsEditor.putString("email", loginModel.email)
+        prefsEditor.putString("password", loginModel.password)
         prefsEditor.apply()
         prefsEditor.commit()
 
@@ -106,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun registerUser(){
         val registerIntent: Intent = Intent(this, RegisterActivity::class.java)
-        registerIntent.putExtra("email", binding.editTextEmail.text.toString().trim())
+        registerIntent.putExtra("email", loginModel.email)
         startActivity(registerIntent)
     }
 }

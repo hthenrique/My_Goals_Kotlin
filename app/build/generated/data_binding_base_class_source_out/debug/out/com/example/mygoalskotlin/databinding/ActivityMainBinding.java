@@ -4,6 +4,8 @@ package com.example.mygoalskotlin.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.mygoalskotlin.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,10 +23,98 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final FloatingActionButton addGoalButton;
+
+  @NonNull
+  public final FloatingActionButton addMatchButton;
+
+  @NonNull
+  public final FloatingActionButton cancelEditButton;
+
+  @NonNull
+  public final ConstraintLayout constraintLayout;
+
+  @NonNull
+  public final FloatingActionButton decreaseGoalButton;
+
+  @NonNull
+  public final FloatingActionButton decreaseMatchButton;
+
+  @NonNull
+  public final FloatingActionButton editDoneButton;
+
+  @NonNull
+  public final FloatingActionButton editPositionButton;
+
+  @NonNull
+  public final LinearLayout editPositionNameLayout;
+
+  @NonNull
+  public final EditText editTextPosition;
+
+  @NonNull
+  public final TextView goalsValue;
+
+  @NonNull
+  public final LinearLayout linearLayout;
+
+  @NonNull
+  public final LinearLayout linearLayout2;
+
+  @NonNull
+  public final LinearLayout linearLayout3;
+
+  @NonNull
+  public final ConstraintLayout linearLayout4;
+
+  @NonNull
+  public final ConstraintLayout linearLayout5;
+
+  @NonNull
+  public final TextView matchesValue;
+
+  @NonNull
+  public final TextView position;
+
+  @NonNull
+  public final TextView userPositionValue;
+
+  @NonNull
   public final TextView welcomeUser;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView welcomeUser) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
+      @NonNull FloatingActionButton addGoalButton, @NonNull FloatingActionButton addMatchButton,
+      @NonNull FloatingActionButton cancelEditButton, @NonNull ConstraintLayout constraintLayout,
+      @NonNull FloatingActionButton decreaseGoalButton,
+      @NonNull FloatingActionButton decreaseMatchButton,
+      @NonNull FloatingActionButton editDoneButton,
+      @NonNull FloatingActionButton editPositionButton,
+      @NonNull LinearLayout editPositionNameLayout, @NonNull EditText editTextPosition,
+      @NonNull TextView goalsValue, @NonNull LinearLayout linearLayout,
+      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
+      @NonNull ConstraintLayout linearLayout4, @NonNull ConstraintLayout linearLayout5,
+      @NonNull TextView matchesValue, @NonNull TextView position,
+      @NonNull TextView userPositionValue, @NonNull TextView welcomeUser) {
     this.rootView = rootView;
+    this.addGoalButton = addGoalButton;
+    this.addMatchButton = addMatchButton;
+    this.cancelEditButton = cancelEditButton;
+    this.constraintLayout = constraintLayout;
+    this.decreaseGoalButton = decreaseGoalButton;
+    this.decreaseMatchButton = decreaseMatchButton;
+    this.editDoneButton = editDoneButton;
+    this.editPositionButton = editPositionButton;
+    this.editPositionNameLayout = editPositionNameLayout;
+    this.editTextPosition = editTextPosition;
+    this.goalsValue = goalsValue;
+    this.linearLayout = linearLayout;
+    this.linearLayout2 = linearLayout2;
+    this.linearLayout3 = linearLayout3;
+    this.linearLayout4 = linearLayout4;
+    this.linearLayout5 = linearLayout5;
+    this.matchesValue = matchesValue;
+    this.position = position;
+    this.userPositionValue = userPositionValue;
     this.welcomeUser = welcomeUser;
   }
 
@@ -54,13 +145,131 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.addGoalButton;
+      FloatingActionButton addGoalButton = ViewBindings.findChildViewById(rootView, id);
+      if (addGoalButton == null) {
+        break missingId;
+      }
+
+      id = R.id.addMatchButton;
+      FloatingActionButton addMatchButton = ViewBindings.findChildViewById(rootView, id);
+      if (addMatchButton == null) {
+        break missingId;
+      }
+
+      id = R.id.cancelEditButton;
+      FloatingActionButton cancelEditButton = ViewBindings.findChildViewById(rootView, id);
+      if (cancelEditButton == null) {
+        break missingId;
+      }
+
+      id = R.id.constraintLayout;
+      ConstraintLayout constraintLayout = ViewBindings.findChildViewById(rootView, id);
+      if (constraintLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.decreaseGoalButton;
+      FloatingActionButton decreaseGoalButton = ViewBindings.findChildViewById(rootView, id);
+      if (decreaseGoalButton == null) {
+        break missingId;
+      }
+
+      id = R.id.decreaseMatchButton;
+      FloatingActionButton decreaseMatchButton = ViewBindings.findChildViewById(rootView, id);
+      if (decreaseMatchButton == null) {
+        break missingId;
+      }
+
+      id = R.id.editDoneButton;
+      FloatingActionButton editDoneButton = ViewBindings.findChildViewById(rootView, id);
+      if (editDoneButton == null) {
+        break missingId;
+      }
+
+      id = R.id.editPositionButton;
+      FloatingActionButton editPositionButton = ViewBindings.findChildViewById(rootView, id);
+      if (editPositionButton == null) {
+        break missingId;
+      }
+
+      id = R.id.editPositionNameLayout;
+      LinearLayout editPositionNameLayout = ViewBindings.findChildViewById(rootView, id);
+      if (editPositionNameLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.editTextPosition;
+      EditText editTextPosition = ViewBindings.findChildViewById(rootView, id);
+      if (editTextPosition == null) {
+        break missingId;
+      }
+
+      id = R.id.goalsValue;
+      TextView goalsValue = ViewBindings.findChildViewById(rootView, id);
+      if (goalsValue == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout2;
+      LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout2 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout3;
+      LinearLayout linearLayout3 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout3 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout4;
+      ConstraintLayout linearLayout4 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout4 == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout5;
+      ConstraintLayout linearLayout5 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout5 == null) {
+        break missingId;
+      }
+
+      id = R.id.matchesValue;
+      TextView matchesValue = ViewBindings.findChildViewById(rootView, id);
+      if (matchesValue == null) {
+        break missingId;
+      }
+
+      id = R.id.position;
+      TextView position = ViewBindings.findChildViewById(rootView, id);
+      if (position == null) {
+        break missingId;
+      }
+
+      id = R.id.userPositionValue;
+      TextView userPositionValue = ViewBindings.findChildViewById(rootView, id);
+      if (userPositionValue == null) {
+        break missingId;
+      }
+
       id = R.id.welcomeUser;
       TextView welcomeUser = ViewBindings.findChildViewById(rootView, id);
       if (welcomeUser == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, welcomeUser);
+      return new ActivityMainBinding((ConstraintLayout) rootView, addGoalButton, addMatchButton,
+          cancelEditButton, constraintLayout, decreaseGoalButton, decreaseMatchButton,
+          editDoneButton, editPositionButton, editPositionNameLayout, editTextPosition, goalsValue,
+          linearLayout, linearLayout2, linearLayout3, linearLayout4, linearLayout5, matchesValue,
+          position, userPositionValue, welcomeUser);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

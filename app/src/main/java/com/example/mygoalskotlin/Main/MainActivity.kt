@@ -39,7 +39,12 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this, currentUser.email, Toast.LENGTH_LONG).show()
 
-        binding.welcomeUser.text = "Welcome! " + currentUser.name
+        if (currentUser.name != null){
+            binding.welcomeUser.text = "Welcome! ${this.currentUser.name}"
+        }else{
+            binding.welcomeUser.text = "Welcome! "
+        }
+
 
         setupButtonClick()
     }

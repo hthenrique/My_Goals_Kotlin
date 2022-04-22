@@ -2051,6 +2051,7 @@ int id linearLayout4 0x7f0800f0
 int id linearLayout5 0x7f0800f1
 int id listMode 0x7f0800f2
 int id list_item 0x7f0800f3
+int id loginProgressBar 0x7f0801da
 int id logo 0x7f0800f4
 int id logoutUser 0x7f0800f5
 int id masked 0x7f0800f6
@@ -2143,6 +2144,7 @@ int id radio 0x7f08014c
 int id ratio 0x7f08014d
 int id rectangles 0x7f08014e
 int id recycler_view 0x7f08014f
+int id registerProgressBar 0x7f0801db
 int id reverseSawtooth 0x7f080150
 int id right 0x7f080151
 int id rightToLeft 0x7f080152
@@ -2236,6 +2238,8 @@ int id textSpacerNoButtons 0x7f0801a9
 int id textSpacerNoTitle 0x7f0801aa
 int id textStart 0x7f0801ab
 int id textTop 0x7f0801ac
+int id textView 0x7f0801dc
+int id textView2 0x7f0801dd
 int id textWatcher 0x7f0801ad
 int id text_input_end_icon 0x7f0801ae
 int id text_input_error_icon 0x7f0801af
@@ -2262,6 +2266,7 @@ int id transition_position 0x7f0801c3
 int id transition_scene_layoutid_cache 0x7f0801c4
 int id transition_transform 0x7f0801c5
 int id triangle 0x7f0801c6
+int id txtError 0x7f0801de
 int id unchecked 0x7f0801c7
 int id uniform 0x7f0801c8
 int id unlabeled 0x7f0801c9

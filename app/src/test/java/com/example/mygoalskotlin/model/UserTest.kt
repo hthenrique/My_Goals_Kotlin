@@ -1,25 +1,24 @@
 package com.example.mygoalskotlin.model
 
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import junit.framework.TestCase.assertEquals
+import org.junit.Before
+import org.junit.Test
 
 internal class UserTest{
     private val expectedUser: User = User()
 
-    @BeforeEach
+    @Before
     fun setup(){
         expectedUser.name = "Test"
-        expectedUser.setEmail("test@test.com")
-        expectedUser.setPassword("Test#Test1")
+        expectedUser.email = "test@test.com"
+        expectedUser.password = "Test#Test1"
     }
 
     @Test
     fun testUser(){
-        var testUser: User = User()
-        testUser = expectedUser
+        val testUser = expectedUser
 
-        Assertions.assertEquals(expectedUser, testUser)
+        assertEquals(expectedUser, testUser)
     }
 
 }

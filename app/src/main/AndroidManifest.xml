@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGoalsKotlin">
-        <activity android:name=".Register.View.RegisterActivity" />
-        <activity android:name=".Login.View.LoginActivity" />
+        <activity android:name="com.example.mygoalskotlin.ui.register.View.RegisterActivity" />
+        <activity android:name="com.example.mygoalskotlin.ui.login.View.LoginActivity" />
         <activity
-            android:name=".Splash.SplashActivity"
+            android:name="com.example.mygoalskotlin.ui.splash.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main.MainActivity" />
+        <activity android:name="com.example.mygoalskotlin.ui.main.MainActivity" />
     </application>
 
 </manifest>

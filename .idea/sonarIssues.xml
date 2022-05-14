@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/androidTest/java/com/hthenrique/cyberlabsdesafio/ExampleInstrumentedTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/androidTest/java/com/hthenrique/cyberlabsdesafio/ui/MainActivityTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/java/com/hthenrique/cyberlabsdesafio/model/Author.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/java/com/hthenrique/cyberlabsdesafio/ui/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/java/com/hthenrique/cyberlabsdesafio/ui/presenter/MainPresenter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/java/com/hthenrique/cyberlabsdesafio/util/ConnectionUtil.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/BaseTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/ExampleUnitTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/model/AuthorTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/model/AuthorTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/ui/presenter/MainPresenterTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/app/src/test/java/com/hthenrique/cyberlabsdesafio/ui/presenter/MainPresenterTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsDesafio/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/build/tmp/kapt3/stubs/debug/com/hthenrique/cyberlabstest/model/Author.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/adapter/AuthorAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/adapter/AuthorGroupAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/adapter/AuthorGroupItemAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/database/AuthorCRUD.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/database/AuthorsDatabase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/Author.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorDetailsGroup.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorGroup.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorGroupList.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorListGroup.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorListResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/model/AuthorSectionGroup.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/repository/AuthorsRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/AuthorsApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/RequestApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/RetrofitEndPoint.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/RetrofitInstance.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/ServiceApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/retrofit/appModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/ui/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/ui/MainContract.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/ui/presenter/MainContract.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/ui/presenter/MainPresenter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/ui/viewmodel/MainViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/util/ConnectionUtil.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/util/Constants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/util/NetworkBoundResource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/java/com/hthenrique/cyberlabstest/util/Resource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/app/src/main/res/layout/group_list.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/CyberlabsTest/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../SimpleCachingExample/app/src/main/java/com/codinginflow/simplecachingexample/di/AppModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TheMovieDB-Kotlin/app/src/main/java/com/example/themoviedbkotlin/ui/main/UI/main/MainPresenter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../desafio-android/app/src/main/java/com/picpay/desafio/ui/fragments/ContactListFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/Login/View/LoginActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/Login/ViewModel/LoginViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/Main/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/login/Model/LoginModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/login/View/LoginActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/login/ViewModel/LoginViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/main/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/model/User.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/register/Model/RegisterModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/register/View/RegisterActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/register/model/RegisterModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/register/view/RegisterActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/login/Model/LoginModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/login/View/LoginActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/login/ViewModel/LoginViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/main/MainActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/register/Model/RegisterModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mygoalskotlin/ui/register/View/RegisterActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

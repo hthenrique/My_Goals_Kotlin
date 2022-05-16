@@ -1,10 +1,11 @@
-package com.example.mygoalskotlin.ui.login.View
+package com.example.mygoalskotlin.Login.View
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygoalskotlin.ui.login.Model.LoginModel
@@ -51,15 +52,10 @@ class LoginActivity : AppCompatActivity() {
             loginModel.email = binding.editTextEmail.text.toString().trim()
             loginModel.password = binding.editTextPassword.text.toString().trim()
 
-            if (validator.isValidEmail(loginModel.email)){
-                if (validator.isValidPassword(loginModel.password)){
-                    firebaseRequest()
-                }else{
-                    binding.editTextPassword.error = getString(R.string.password_Requirements)
-                    Toast.makeText(this, MessagesConstants.INVALID_PASSWORD, Toast.LENGTH_LONG).show()
-                }
+            if (validateUserToLogin()){
+                firebaseRequest()
             }else{
-                Toast.makeText(this, MessagesConstants.INVALID_EMAIL, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, MessagesConstants.INVALID_PARAMETERS, Toast.LENGTH_LONG).show()
             }
         }
 
@@ -76,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
                     loginUser()
                     saveUserInSharedPrefs()
                 }else{
+                    binding.loginProgressBar.visibility = View.GONE
                     Toast.makeText(this,MessagesConstants.NON_EXISTENT_USER,Toast.LENGTH_LONG).show()
                     registerUser()
                 }
@@ -105,5 +102,26 @@ class LoginActivity : AppCompatActivity() {
         val registerIntent: Intent = Intent(this, RegisterActivity::class.java)
         registerIntent.putExtra("email", loginModel.email)
         startActivity(registerIntent)
+    }
+
+    private fun validateUserToLogin(): Boolean{
+        val validator: Validator = Validator()
+        var isValid: Boolean = false
+        var isValidEmail: Boolean = false
+        var isValidPassword: Boolean = false
+
+        if (validator.isValidEmail(loginModel.email)){
+            isValidEmail = true
+        }
+
+        if (validator.isValidPassword(loginModel.password)){
+            isValidPassword = true
+        }
+
+        if (isValidEmail && isValidPassword){
+            isValid = true
+        }
+
+        return isValid
     }
 }

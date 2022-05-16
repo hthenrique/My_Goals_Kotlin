@@ -2,7 +2,9 @@ package com.example.mygoalskotlin.model
 
 import java.io.Serializable
 
-class User : Serializable {
+open class User : Serializable {
+
+    var uid: String? = null
     var name: String? = null
     var email: String? = null
     var password: String? = null
@@ -14,7 +16,6 @@ class User : Serializable {
         return "User [" +
                 "name: ${this.name}," +
                 "email: ${this.email}," +
-                "password: ${this.password}" +
                 "position: ${this.position}" +
                 "]"
     }

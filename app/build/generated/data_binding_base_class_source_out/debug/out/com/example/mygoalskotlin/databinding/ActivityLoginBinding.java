@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -34,17 +36,26 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final EditText editTextPassword;
 
   @NonNull
+  public final ProgressBar loginProgressBar;
+
+  @NonNull
   public final ImageView logo;
+
+  @NonNull
+  public final TextView textView2;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
       @NonNull Button buttonRegister, @NonNull EditText editTextEmail,
-      @NonNull EditText editTextPassword, @NonNull ImageView logo) {
+      @NonNull EditText editTextPassword, @NonNull ProgressBar loginProgressBar,
+      @NonNull ImageView logo, @NonNull TextView textView2) {
     this.rootView = rootView;
     this.buttonLogin = buttonLogin;
     this.buttonRegister = buttonRegister;
     this.editTextEmail = editTextEmail;
     this.editTextPassword = editTextPassword;
+    this.loginProgressBar = loginProgressBar;
     this.logo = logo;
+    this.textView2 = textView2;
   }
 
   @Override
@@ -98,14 +109,26 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.loginProgressBar;
+      ProgressBar loginProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (loginProgressBar == null) {
+        break missingId;
+      }
+
       id = R.id.logo;
       ImageView logo = ViewBindings.findChildViewById(rootView, id);
       if (logo == null) {
         break missingId;
       }
 
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
       return new ActivityLoginBinding((ConstraintLayout) rootView, buttonLogin, buttonRegister,
-          editTextEmail, editTextPassword, logo);
+          editTextEmail, editTextPassword, loginProgressBar, logo, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

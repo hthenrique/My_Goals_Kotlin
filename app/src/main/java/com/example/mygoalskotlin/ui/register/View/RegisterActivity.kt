@@ -1,12 +1,14 @@
-package com.example.mygoalskotlin.ui.register.View
+package com.example.mygoalskotlin.Register.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygoalskotlin.ui.register.Model.RegisterModel
 import com.example.mygoalskotlin.utils.Validator
 import com.example.mygoalskotlin.databinding.ActivityRegisterBinding
+import com.example.mygoalskotlin.model.RegisterModel
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
@@ -28,7 +30,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val intent: Intent = getIntent()
         if (intent != null){
-            registerModel.email = intent.getStringExtra("email").toString()
+            registerModel.email = intent.getStringExtra("email")
             binding.editTextRegisterEmail.setText(registerModel.email)
         }
 
@@ -42,32 +44,58 @@ class RegisterActivity : AppCompatActivity() {
             registerModel.password = binding.editTextPassword.text.toString().trim()
             registerModel.confirmPassword = binding.editTextConfirmPassword.text.toString().trim()
 
-            if (validator.isValidEmail(registerModel.email)){
-                if (registerModel.password == registerModel.confirmPassword){
-                    if (validator.isValidPassword(registerModel.password)){
-                        isValidUser(true)
-                    }else{
-                        Toast.makeText(this, "Senha inválida", Toast.LENGTH_LONG).show()
-                    }
-                }else{
-                    Toast.makeText(this, "Senhas diferentes", Toast.LENGTH_LONG).show()
-                }
-            }else{
-                Toast.makeText(this, "Email inválido", Toast.LENGTH_LONG).show()
-            }
+            isValidUser(isValidUserToRegister())
         }
     }
 
     private fun isValidUser(valid: Boolean){
         if (valid){
-            firebaseAuth?.createUserWithEmailAndPassword(registerModel.email, registerModel.password)
+            firebaseAuth?.createUserWithEmailAndPassword(
+                registerModel.email.toString(),
+                registerModel.password.toString()
+            )
                 ?.addOnCompleteListener {
+                    binding.registerProgressBar.visibility = View.VISIBLE
                     if (it.isSuccessful){
                         onBackPressed()
+                        this.finish()
                     }else{
-                        Toast.makeText(this, "Não foi possível criar o usuário", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
                     }
                 }
         }
+    }
+
+    fun isValidUserToRegister(): Boolean{
+        var isValidUser: Boolean = false
+        var isValidEmail: Boolean = false
+        var isValidPassword: Boolean = false
+        var isPasswordsEquals: Boolean = false
+
+        if (validator.isValidEmail(registerModel.email)){
+            isValidEmail = true
+        }else{
+            Toast.makeText(this, INVALID_EMAIL, Toast.LENGTH_LONG).show()
+        }
+
+        if (validator.isValidPassword(registerModel.password)){
+            isValidPassword = true
+            binding.txtError.visibility = View.INVISIBLE
+        }else{
+            binding.txtError.text = INVALID_PASSWORD
+            binding.txtError.visibility = View.VISIBLE
+        }
+
+        if (registerModel.confirmPassword.equals(registerModel.password)){
+            isPasswordsEquals = true
+        }else{
+            Toast.makeText(this, NO_MATCH_PASSWORD, Toast.LENGTH_LONG).show()
+        }
+
+        if (isValidEmail && isValidPassword && isPasswordsEquals){
+            isValidUser = true
+        }
+
+        return isValidUser
     }
 }

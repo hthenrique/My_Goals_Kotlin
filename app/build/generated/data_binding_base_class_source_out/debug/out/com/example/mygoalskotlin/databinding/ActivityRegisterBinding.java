@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -32,14 +34,28 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final EditText editTextRegisterEmail;
 
+  @NonNull
+  public final ProgressBar registerProgressBar;
+
+  @NonNull
+  public final TextView textView;
+
+  @NonNull
+  public final TextView txtError;
+
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button buttonCreateUser, @NonNull EditText editTextConfirmPassword,
-      @NonNull EditText editTextPassword, @NonNull EditText editTextRegisterEmail) {
+      @NonNull EditText editTextPassword, @NonNull EditText editTextRegisterEmail,
+      @NonNull ProgressBar registerProgressBar, @NonNull TextView textView,
+      @NonNull TextView txtError) {
     this.rootView = rootView;
     this.buttonCreateUser = buttonCreateUser;
     this.editTextConfirmPassword = editTextConfirmPassword;
     this.editTextPassword = editTextPassword;
     this.editTextRegisterEmail = editTextRegisterEmail;
+    this.registerProgressBar = registerProgressBar;
+    this.textView = textView;
+    this.txtError = txtError;
   }
 
   @Override
@@ -93,8 +109,27 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.registerProgressBar;
+      ProgressBar registerProgressBar = ViewBindings.findChildViewById(rootView, id);
+      if (registerProgressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
+      id = R.id.txtError;
+      TextView txtError = ViewBindings.findChildViewById(rootView, id);
+      if (txtError == null) {
+        break missingId;
+      }
+
       return new ActivityRegisterBinding((ConstraintLayout) rootView, buttonCreateUser,
-          editTextConfirmPassword, editTextPassword, editTextRegisterEmail);
+          editTextConfirmPassword, editTextPassword, editTextRegisterEmail, registerProgressBar,
+          textView, txtError);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

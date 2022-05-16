@@ -1,4 +1,4 @@
-package com.example.mygoalskotlin.Login.View
+package com.example.mygoalskotlin.UI.Login.View
 
 import android.annotation.SuppressLint
 import android.content.Context

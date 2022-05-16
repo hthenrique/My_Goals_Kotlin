@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.dummy">
           <value>
             <set />
@@ -274,6 +279,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../desafio-android/app/src/main/java/com/picpay/desafio/ui/fragments/ContactListFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
           </value>
